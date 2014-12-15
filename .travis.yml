@@ -9,7 +9,7 @@ python:
 
 env:
   global:
-    - APPENGINE_SDK_VERSION=1.9.7
+    - APPENGINE_SDK_VERSION=1.9.17
   matrix:
     - DJANGO_VERSION=1.4
     - DJANGO_VERSION=1.5
