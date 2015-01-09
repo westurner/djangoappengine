@@ -22,7 +22,7 @@ install:
   - pip install git+https://github.com/adieu/django-autoload\#egg=django-autoload --target=$PWD
 
 before_script:
-  #- wget https://commondatastorage.googleapis.com/appengine-sdks/featured/google_appengine_$APPENGINE_SDK_VERSION.zip -nv
+  # wget https://commondatastorage.googleapis.com/appengine-sdks/featured/google_appengine_$APPENGINE_SDK_VERSION.zip -nv
   - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_$APPENGINE_SDK_VERSION.zip -nv
   - unzip -q google_appengine_$APPENGINE_SDK_VERSION.zip
   - PYTHONPATH=. python django/bin/django-admin.py startproject --name=app.yaml --template=djangoappengine/conf/project_template appenginetest .
