@@ -13,7 +13,10 @@ else:
         try:
             from google.appengine.tools import dev_appserver
         except ImportError:
-            from google.appengine.tools import old_dev_appserver as dev_appserver
+            try:
+                from google.appengine.tools import dev_appserver2 as dev_appserver
+            except ImportError:
+                from google.appengine.tools import old_dev_appserver as dev_appserver
 
         from .boot import PROJECT_DIR
         appconfig = dev_appserver.LoadAppConfig(PROJECT_DIR, {},
